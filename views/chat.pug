@@ -1,0 +1,37 @@
+html
+  head
+    title= 'Chat'
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    script(src='/js/app.js', defer=true)
+    script(src='/js/socket.io.js', defer=true)
+    script(src='/js/chat.js', defer=true)
+  body
+    .card-body
+      // Grid row
+      .row.px-lg-2.px-2
+        // Grid column
+        .col-md-6.col-xl-4.px-0          
+          h2.text-lg-left 
+            | Let's Chat!
+          h3#currentUser.text-lg-left
+            |
+          button#exit.btn.btn-block(type='button') Exit Chat
+          h6.font-weight-bold.mb-3.text-center.text-lg-left People
+          .white.z-depth-1.px-3.pt-3.pb-0
+            ul#user-list.list-unstyled.friend-list
+              | No users
+        // Grid column
+        // Grid column
+        .col-md-6.col-xl-8.pl-md-3.px-lg-auto.px-0
+          .chat-message
+            #input.input-group(hidden='')
+              input#message.form-control(type='text' placeholder='Type your message here')
+              span.input-group-btn
+                button#send.btn.btn-primary(type='button') Send
+            br
+            div#select.text-center
+              p Select an user to chat
+            ul#messages.list-unstyled.chat(hidden='')
+              | No messages
+        // Grid column
+      // Grid row

@@ -1,0 +1,28 @@
+html
+  head
+    title= 'Sign In'
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/sign-in.css')
+    script(src='/js/app.js', defer=true)
+    script(src='/js/sign-in.js', defer=true)
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand(href='/') Let&apos;s Chat!
+      #navbarNav.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item.active
+            a.nav-link(href='/') Home
+          li.nav-item
+            a.nav-link(href='/sign-in') Sign In
+    .text-center
+      form#sign-in-form.form-signin
+        h1.h3.mb-3.font-weight-normal Sign In
+        label.sr-only(for='email') Email address
+        input#email.form-control(type='email' placeholder='Email address' required='' autofocus='')
+        label.sr-only(for='password') Password
+        input#password.form-control(type='password' placeholder='Password' required='')      
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign In
+        br
+        span Don't have an account?
+        br
+        a(href='/sign-up') Sign Up
