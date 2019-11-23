@@ -3,6 +3,7 @@ const path = require('path');
 
 const app = express();
 
+app.use(require('express-status-monitor')());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
